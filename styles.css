@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-image: url("images/fondo.png");  color: #ffffff; 
+  transition: background 0.5s ease, color 0.5s ease;
+}
+  
+
+body.theme-dark {
+  background-image: url("images/fondo2.png");  color: #ffffff; 
+  color: #ffffff; 
+}
+
+.site-header {
+  text-align: center;
+  padding: 20px;
+}
+
+.controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background: #fff;
+  border: 2px solid #6bbd6e;
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  background: #dff0df;
+}
+body.theme-dark .btn {
+  background: #2a3b2a;
+  color: #f0f7f0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: #7ace5b;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.15);
+}
+
+body.theme-dark .card {
+  background: #034929; 
+  box-shadow: 0 4px 8px rgba(0,0,0,.4);
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;      
+  border-radius: 12px;    
+  border: 4px solid #7ee87c; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+  margin-bottom: 10px;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+body.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(20px); }
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ffffff; 
+
+body.theme-dark .site-footer {
+  color: #ccc;
+}
+}
+
